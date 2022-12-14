@@ -1,0 +1,75 @@
+<div *ngIf="config?.showOverlay" class="overlay"></div>
+
+<div [style.background]="config?.theme.background"
+     class="wrapper">
+
+    <div class="top">
+
+        <div class="left">
+
+            <div class="title">
+
+                {{ config?.title }}
+
+            </div>
+
+        </div>
+
+        <div class="right">
+
+            <svg (click)="instance.close()" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                 width="24.000000pt" height="24.000000pt" viewBox="0 0 24.000000 24.000000"
+                 preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"
+                   stroke="none">
+
+                    <path d="M44 187 c-3 -8 -4 -43 -2 -78 l3 -64 75 0 75 0 0 75 0 75 -73 3 c-55
+2 -74 -1 -78 -11z m58 -34 c17 -15 19 -15 38 2 26 24 39 11 15 -15 -17 -19
+-17 -21 0 -40 24 -26 11 -39 -15 -15 -19 17 -21 17 -40 0 -26 -24 -39 -11 -15
+15 17 19 17 21 2 38 -30 33 -18 45 15 15z"/>
+                </g>
+
+            </svg>
+
+
+        </div>
+
+    </div>
+
+    <div #center class="center"></div>
+
+    <div class="bottom">
+
+        <div class="left">
+
+            <button *ngFor="let button of config?.leftButtons"
+                    (click)="onButtonClick(button)"
+                    [style.background]="button.theme?.background"
+                    [style.color]="button.theme?.color">
+
+                {{ button.label }}
+
+            </button>
+
+        </div>
+
+        <div *ngIf="config?.rightButtons"
+             class="right">
+
+            <button *ngFor="let button of config?.rightButtons"
+                    (click)="onButtonClick(button)"
+                    [style.background]="button.theme?.background"
+                    [disabled]="button.disabled"
+                    [class.disabled]="button.disabled"
+                    [style.color]="button.theme?.color">
+
+                {{ button.label }}
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

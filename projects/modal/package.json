@@ -1,0 +1,12 @@
+{
+    "name": "@ngstudio/modal",
+    "version": "0.0.10",
+    "peerDependencies": {
+        "@angular/common": "^13.1.0",
+        "@angular/core": "^13.1.0",
+        "@ngstudio/dynamic-component-factory": "^0.0.3"
+    },
+    "dependencies": {
+        "tslib": "^2.3.0"
+    }
+}

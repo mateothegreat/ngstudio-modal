@@ -1,0 +1,126 @@
+:host {
+
+    .overlay {
+
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .wrapper {
+
+        z-index: 1001;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background: #ddd;
+        padding: 15px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+
+        .top {
+
+            display: flex;
+
+            .left {
+
+                flex: 1;
+
+                .title {
+
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin-bottom: 25px;
+
+                }
+
+            }
+
+            .right {
+
+                svg {
+
+                    fill: #ccc;
+                    cursor: pointer;
+
+                    &:hover {
+
+                        fill: #888;
+
+                    }
+                }
+
+            }
+
+        }
+
+        .center {
+
+            flex: 1;
+
+        }
+
+        .bottom {
+
+            display: flex;
+            justify-content: space-between;
+
+            button {
+
+                touch-action: manipulation;
+                border-radius: 5px;
+                border: 1px solid #bbb;
+                padding: 10px 13px;
+                font-size: 12px;
+                min-width: 80px;
+
+                &:active {
+
+                    transform: scale(0.98);
+                    box-shadow: 3px 2px 15px 1px rgba(0, 0, 0, 0.24);
+
+                }
+
+            }
+
+            .left {
+
+                margin-right: 40px;
+
+            }
+
+            .right {
+
+                display: flex;
+
+                button {
+
+                    margin-left: 15px;
+
+                }
+
+            }
+
+            .disabled {
+
+                background-color: #555 !important;
+                border: 0;
+
+            }
+
+        }
+
+    }
+
+
+}
